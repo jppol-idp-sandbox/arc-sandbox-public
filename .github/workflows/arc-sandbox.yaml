@@ -1,0 +1,8 @@
+name: arc-sandbox
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: sandbox
+    timeout-minutes: 10
+    steps:
+      - run: echo "runner=$RUNNER_NAME host=$(hostname)"
